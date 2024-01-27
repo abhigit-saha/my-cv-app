@@ -1,0 +1,97 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+/*
+  2. Remove default margin
+*/
+/* * {
+  margin: 0;
+} */
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+.screen {
+  display: grid;
+  grid-template-areas:
+    "navbar"
+    "grid";
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "content pdf-preview";
+  gap: 20px;
+  margin-top: 50px;
+}
+.GeneralInfo,
+.EdExp,
+.ProfExp {
+  -webkit-box-shadow: 4px 6px 25px -13px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 4px 6px 25px -13px rgba(0, 0, 0, 0.75);
+  box-shadow: 4px 6px 25px -13px rgba(0, 0, 0, 0.75);
+  padding: 10px;
+  border-radius: 10px;
+}
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+.navbar {
+  grid-area: "navbar";
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 2;
+  background-color: #aaf0d1;
+  opacity: 0.8;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+}
+i {
+  font-size: 30px;
+  margin: 0 10px 0 10px;
+}
+
+.grid {
+  overflow-y: scroll;
+}
+button {
+  background-color: #aaf0d1;
+  border: none;
+
+  margin-top: 5px;
+}
+.content {
+  grid-area: "content";
+  margin-right: 5px;
+}
+.pdf-preview {
+  grid-area: "pdf-preview";
+}
+
+.pdf-preview h2 {
+  margin-top: 20px;
+}
+.pdf-top {
+  margin-bottom: 50px;
+}
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
